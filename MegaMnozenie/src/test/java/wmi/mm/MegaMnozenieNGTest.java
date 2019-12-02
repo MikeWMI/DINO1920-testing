@@ -189,6 +189,32 @@ public class MegaMnozenieNGTest {
         String result = MegaMnozenie.mnozenie(a, b);
         assertEquals(result, expResult);
     }
+    public void testMnozenie_1() {
+        System.out.println("mnozenie long");
+        String a = "567";
+        String b = "3123456789";
+        String expResult = "1770999999363";
+        String result = MegaMnozenie.mnozenie(a, b);
+        assertEquals(result, expResult);
+    }
+    @Test
+    public void testMnozenie_2() {
+        System.out.println("mnozenie long");
+        String a = "987987987987";
+        String b = "12345";
+        String expResult = "12196711711699515";
+        String result = MegaMnozenie.mnozenie(a, b);
+        assertEquals(result, expResult);
+    }
+    @Test
+    public void testMnozenie_3() {
+        System.out.println("mnozenie long");
+        String a = "2147483648";
+        String b = "2147483648";
+        String expResult = "4611686018427387904";
+        String result = MegaMnozenie.mnozenie(a, b);
+        assertEquals(result, expResult);
+    }
 }
 
 

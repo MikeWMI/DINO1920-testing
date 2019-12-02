@@ -25,7 +25,18 @@ public class MegaMnozenie
                 if (isParsableToInt(a) && isParsableToInt(b)) {
                     int aa = Integer.parseInt(a);
                     int bb = Integer.parseInt(b);
-                    return Integer.toString(aa * bb);
+                
+                if(aa> 2147483647 && bb>2147483647){
+                    return longMultiply(aa*bb);
+                }
+                else if (aa> 2147483647){
+                    return longMultiply(aa*bb);
+                }
+                else if (bb> 2147483647){
+                    return longMultiply(aa*bb);
+                }
+                return Integer.toString(aa * bb);
+;
                 }
                 // one of them is double
                 else {
@@ -119,5 +130,12 @@ public class MegaMnozenie
             result = mnozenie(result, clearA);
         }
         return result;
+    }
+    private static String longMultiply(Int a, Int b){
+        long aa = Long.parseLong(a);
+        long bb = Long.parseLong(b);
+
+        long multyply = aa*bb;
+        return Long.toString(multyply);
     }
 }
